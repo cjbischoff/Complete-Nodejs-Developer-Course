@@ -4,17 +4,19 @@ console.log('Starting apps.js');
 const fs = require('fs');
 const os = require('os');
 const notes = require('./notes');
+const _ = require('lodash');
+
 
 // Add Note Function
-var res = notes.addNote();
-console.log(res);
+// var res = notes.addNote();
+/// console.log(res);
 
 // Add numbers
-var sum = notes.addNumbers(5,5);
-console.log(sum);
+// var sum = notes.addNumbers(5,5);
+// console.log(sum);
 
 // Add numbers
-console.log('Result:',notes.addNumbers(9,-2));
+// console.log('Result:',notes.addNumbers(9,-2));
 
 // var user = os.userInfo();
 // console.log(user);
@@ -28,3 +30,9 @@ console.log('Result:',notes.addNumbers(9,-2));
 // Better way
 // fs.appendFileSync('greetings.txt',` Hello ${user.username}! You are ${notes.age}.`);
 
+// Testing/using lodash
+console.log(_.isString(true));
+console.log(_.isString('Christopher'));
+// Cleaning DUPs
+var filterArray = _.uniq(['christopher',1,'christopher',1,2,3,4,5,3,2,1]);
+console.log(filterArray);
