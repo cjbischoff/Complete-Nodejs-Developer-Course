@@ -2,7 +2,6 @@ console.log('Starting notes.js');
 
 const fs = require('fs');
 
-
 var fetchNotes = () => {
     try {
         var notesString = fs.readFileSync('notes-data.json');
@@ -45,7 +44,11 @@ var getNote = (title) => {
 };
 
 var removeNote = (title) => {
-    console.log('Remove note ', title);
+    var notes = fetchNotes();
+    var filteredNotes = notes.filter((note) => note.title !== title);
+    saveNotes(filteredNotes);
+    return notes.length !== filteredNotes.length;
+
 };
 
 
