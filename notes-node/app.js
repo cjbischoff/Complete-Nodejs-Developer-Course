@@ -16,7 +16,7 @@ console.log('Yargs', argv);
 if (command === 'add') {
     var note = notes.addNote(argv.title, argv.body);
     if (note) {
-        notes.logNote(note,'Note Created');
+        notes.logNote(note, 'Note Created');
     } else {
         console.log('ERROR: Note title Taken');
     }
@@ -26,7 +26,7 @@ if (command === 'add') {
     var note = notes.getNote(argv.title);
 
     if (note) {
-        notes.logNote(note,'Note Found');
+        notes.logNote(note, 'Note Found');
     } else {
         console.log('ERROR: Note Note Found');
     }

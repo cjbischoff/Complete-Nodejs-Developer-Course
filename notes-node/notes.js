@@ -52,7 +52,12 @@ var removeNote = (title) => {
     return notes.length !== filteredNotes.length;
 };
 
-var logNote = (note,message) =>{
+var logNote = (note, message) => {
+    // break on this line and repl to output note
+    // node inspect
+    // use read command with --title
+
+    debugger;
     console.log('--');
     console.log(message);
     console.log('--');
